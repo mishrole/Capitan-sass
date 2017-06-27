@@ -5,25 +5,58 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-@for $i from 1 through 12 {
-	.col-#{$i} {
-		width: 100% / (12/$i);
-		margin-left: auto;
-        left: auto;
-        right: auto;
+$columns : 12;
+$column-width : 100%/$columns;
+$breakpoints : (xs : 0, sm : 480px, md : 768px, lg : 992px );
+
+@function column-width($column){
+	@return $column-width*$column;
+}
+
+@mixin column($media, $min-width){
+	@media (min-width:$min-width){
+		@for $i from 1 through $columns {
+			.column-#{$media}-#{$i} {
+				width: column-width($i);
+				float: left;
+			}
+		}
 	}
 }
 
+@each $name, $width in $breakpoints {
+	@include column($name, $width);
+}
+
+//@include column('xs', 0);
+//@include column('sm', 768px);
+//@include column('md', 992px);
+//@include column('lg', 1200px);
 header{
 	height: 12vh;
 	background-color: $color;
-	color: $white-text;
 
 	*{
-		margin-left: 2vw;
+		margin-left: 3vw;
 	}
+}
+
+footer{
+	background-color: $dark-menu;
+	height: 10vh;
+	margin-top: 10px;
+}
+
+.container{
+	margin: 10px auto;
+	width: 95%;
+}
+
+.white-text{
+	color: $white-text;
 }
 
 .vertical-center{
@@ -34,4 +67,39 @@ header{
 .center{
 	@extend .vertical-center;
 	justify-content: center;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.menu{
+	ul{
+		list-style: none;
+		li{
+			padding: 10px 0;
+			margin-bottom: 5px;
+			background-color: $dark-menu;
+		}
+	}
+}
+
+.menu ul li:hover{
+	background-color: $color;
+}
+
+.aside{
+	background-color: $dark-menu;
+}
+
+.exercise{
+	padding: 10px;
 }
