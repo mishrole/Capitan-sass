@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.col-1 {
+  width: 8.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-2 {
+  width: 16.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-3 {
+  width: 25%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-4 {
+  width: 33.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-5 {
+  width: 41.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-6 {
+  width: 50%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-7 {
+  width: 58.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-8 {
+  width: 66.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-9 {
+  width: 75%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-10 {
+  width: 83.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-11 {
+  width: 91.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+.col-12 {
+  width: 100%;
+  margin-left: auto;
+  left: auto;
+  right: auto; }
+
+header {
+  height: 12vh;
+  background-color: #f9a91a;
+  color: white; }
+  header * {
+    margin-left: 2vw; }
+
+.vertical-center, .center {
+  display: flex;
+  align-items: center; }
+
+.center {
+  justify-content: center; }
+
+/*# sourceMappingURL=main.css.map */

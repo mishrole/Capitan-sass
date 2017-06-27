@@ -1,0 +1,37 @@
+@import 'colors';
+@import 'fonts';
+@import 'resolutions';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@for $i from 1 through 12 {
+	.col-#{$i} {
+		width: 100% / (12/$i);
+		margin-left: auto;
+        left: auto;
+        right: auto;
+	}
+}
+
+header{
+	height: 12vh;
+	background-color: $color;
+	color: $white-text;
+
+	*{
+		margin-left: 2vw;
+	}
+}
+
+.vertical-center{
+	display: flex;
+	align-items: center;
+}
+
+.center{
+	@extend .vertical-center;
+	justify-content: center;
+}
